@@ -47,15 +47,21 @@ body {
   background:
     radial-gradient(ellipse at 12% 6%, var(--accent-soft), transparent 36rem),
     var(--bg);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
 a {
   font: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
 }
 
 a {
@@ -113,8 +119,10 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.01em;
   flex-shrink: 0;
 }
 
@@ -303,9 +311,9 @@ button {
   max-width: 760px;
   margin: 0 0 20px;
   font-size: clamp(2.8rem, 5.5vw, 5.4rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 .hero h1 em {
@@ -397,6 +405,7 @@ button {
 .hpc-name {
   font-size: 1.4rem;
   font-weight: 700;
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   letter-spacing: -0.02em;
 }
 
@@ -502,59 +511,6 @@ button {
   color: var(--muted);
 }
 
-/* ── Impact / Metrics ── */
-
-.impact {
-  padding: 40px 0;
-  display: grid;
-  grid-template-columns: 0.55fr 1.45fr;
-  gap: 60px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.impact-label span {
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.impact-label p {
-  max-width: 240px;
-  margin: 8px 0 0;
-  color: var(--subtle);
-  line-height: 1.55;
-  font-size: 0.9rem;
-}
-
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.metric {
-  padding: 4px 0 4px 20px;
-  border-left: 2px solid var(--accent);
-}
-
-.metric strong {
-  display: block;
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  letter-spacing: -0.04em;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.metric span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
 
 /* ── Sections ── */
 
@@ -571,9 +527,9 @@ button {
 .project-drawer h2 {
   margin: 12px 0 0;
   font-size: clamp(2rem, 4vw, 3.6rem);
-  line-height: 1.1;
-  letter-spacing: -0.035em;
-  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 800;
 }
 
 .section-heading p {
@@ -712,9 +668,9 @@ button {
 .project-card__body h3 {
   margin: 0 0 8px;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.02em;
-  line-height: 1.3;
+  line-height: 1.25;
 }
 
 .project-card__body p {

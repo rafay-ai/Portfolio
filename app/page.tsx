@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useInView, useScroll, useSpring } from "motion/react";
+import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -19,10 +19,9 @@ import {
   Sun,
   X,
 } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   experience,
-  metrics,
   profile,
   projects,
   skillGroups,
@@ -37,48 +36,6 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-function AnimatedMetric({
-  value,
-  suffix,
-  label,
-  decimals,
-}: {
-  value: number;
-  suffix: string;
-  label: string;
-  decimals: number;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    const duration = 1100;
-    const start = performance.now();
-    let frame = 0;
-
-    const tick = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplayValue(value * eased);
-      if (progress < 1) frame = requestAnimationFrame(tick);
-    };
-
-    frame = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(frame);
-  }, [inView, value]);
-
-  return (
-    <div className="metric" ref={ref}>
-      <strong>
-        {displayValue.toFixed(decimals)}
-        {suffix}
-      </strong>
-      <span>{label}</span>
-    </div>
-  );
-}
 
 function SectionHeading({
   eyebrow,
@@ -366,24 +323,13 @@ export default function Home() {
 
         <motion.a
           className="scroll-hint"
-          href="#impact"
+          href="#work"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
         >
           Scroll down <ArrowDown size={14} />
         </motion.a>
-      </section>
-
-      {/* ── Impact ── */}
-      <section className="impact shell" id="impact">
-        <div className="impact-label">
-          <span>By the numbers</span>
-          <p>Real results from production AI systems.</p>
-        </div>
-        <div className="metrics-grid">
-          {metrics.map((metric) => <AnimatedMetric key={metric.label} {...metric} />)}
-        </div>
       </section>
 
       {/* ── Work / Projects ── */}
