@@ -15,14 +15,11 @@ export const profile = {
   location: "Karachi, Pakistan",
   email: "abdulrafayy255@gmail.com",
   introduction:
-    "I architect and deploy production-grade computer vision, multimodal OCR, and language-model systems for identity, document, and enterprise automation.",
-  availability: "Open to AI engineering opportunities",
+    "I build AI systems that turn messy, real-world data into reliable results from document understanding and identity verification to language processing and production APIs.",
+  availability: "Open to new opportunities",
   resumePath: "/Abdul_Rafay_Resume.pdf",
-  // Add your complete profile URLs before publishing. Empty values are hidden automatically.
   github: "https://github.com/rafay-ai",
-  linkedin: "https://linkedin.com/in/abdul-rafay-1553681b8"
-
-,
+  linkedin: "https://linkedin.com/in/abdul-rafay-551327437",
 };
 
 export const metrics = [
