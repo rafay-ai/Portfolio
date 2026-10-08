@@ -184,7 +184,7 @@ export default function Home() {
         >
           <p className="label">{profile.role}, {profile.location}</p>
           <h1>
-            I train models that read documents, check identities and make sense of <em>Urdu</em> text.
+            I build vision and language models that hold up on <em>messy</em>, real-world data.
           </h1>
           <p className="hero__intro">{profile.introduction}</p>
           <div className="hero__actions">

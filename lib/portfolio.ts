@@ -4,7 +4,7 @@ export const profile = {
   location: "Karachi, Pakistan",
   email: "abdulrafayy255@gmail.com",
   introduction:
-    "I build AI systems that turn messy, real-world data into reliable results: document understanding, identity verification, Urdu language processing, and the APIs that serve them.",
+    "From deepfake detection and document understanding to identity verification and multilingual text, I take models from research to production and build the APIs that serve them.",
   availability: "Open to new opportunities",
   resumePath: "/Abdul_Rafay_Resume.pdf",
   github: "https://github.com/rafay-ai",
